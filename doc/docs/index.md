@@ -36,7 +36,7 @@ https://ubunlog.com/laravel-framework-php-ubuntu/
 
 Crear un proyecto en un directorio común ejemplo home/documentos/laravel
 
-El enlace simbólico lo vamos a crear a la carpeta public de laravel para eso es necesario darle permisos 777 a el directorio storage de laravel
+El enlace simbólico lo vamos a crear a la carpeta public de laravel para eso es necesario darle permisos 777 recursivo a el directorio storage de laravel
 
 Luego en el directorio de apache crear el enlace simbólico de la siguiente manera
 
