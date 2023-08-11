@@ -12,8 +12,8 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <x-tertiary-button :href="route('users.create')">Crear nuevo usuario</x-tertiary-button>
-                    <x-tertiary-button :href="route('posts.create')">Crear nuevo post</x-tertiary-button>
+                    <x-tertiary-button :href="route('users.create')">Create new user</x-tertiary-button>
+                    <x-tertiary-button :href="route('posts.create')">Create new post</x-tertiary-button>
                 </div>
             </div>
         </div>

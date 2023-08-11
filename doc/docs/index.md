@@ -322,6 +322,27 @@ ejemplo:  Route::redirect('dashboard', 'posts')->name('dashboard');
 De esta forma aunque la ruta sea dashboard, lo redirige a la ruta posts, directamente al index
 
 
+# Conceptos importantes 
+
+Concepto importantes a tener en cuenta:
+
+Modelo == Tabla (o Entidad) en una database
+Controlador == a un Archivo que se encarga de coordinar las diferentes solicitudes del usuario.
+Factories == una estructura de datos falsos con la que vamos a probar la app.
+Migración == estructura de una tabla que la vamos a tener dentro de Laravel, y luego creamos una tabla (o entidad) en la database.
+
+# Ayuda de un comando  make
+
+php artisan make --help
+
+# Comando completo de inicialización para un CRUD
+
+php artisan make:model nombredelmodelo en singular -rfm
+
+r corresponde a resource de un controlador
+f factory 
+m migration 
+
 
 
 

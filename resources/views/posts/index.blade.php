@@ -7,7 +7,7 @@
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
                 {{ __('Posts') }}
             </h2>
-            <x-tertiary-button :href="route('posts.create')">Crear nuevo post</x-tertiary-button>
+            <x-tertiary-button :href="route('posts.create')">Create new post</x-tertiary-button>
         </div>
     </x-slot>
 
@@ -18,14 +18,14 @@
                 <form action="{{route('posts.index') }}" method="GET">
                     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                     <div class="relative">
-                        <input type="text" name="search" id="default-search" class="uppercase block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Buscar..." required value="{{ request('search') }}">
-                        <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Buscar</button>
+                        <input type="text" name="search" id="default-search" class="uppercase block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." required value="{{ request('search') }}">
+                        <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
                     </div>
                 </form>
             </div>
 
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6 space-y-3 mb-3">
-                <p class="text-white pb-6">Filtrar por autores</p>
+                <p class="text-white pb-6">Filter by authors</p>
                 @foreach ($users as $user)
                     <a class="p-2 text-white font-bold rounded-lg border border-white" href="{{route('users.show', $user)}}">{{ $user->name}}</a>
                 @endforeach
@@ -43,14 +43,14 @@
                         </div>
                         <p class="pt-3"> {{ substr($post['content'], 0 , 200) }} ... </p>
                         <div class="pt-6 flex items-center justify-start space-x-3">
-                            <a class="bg-gray-500 text-white p-2 rounded-lg" href="{{ route('posts.edit', $post) }}">
-                                Editar
+                            <a class="bg-gray-500 p-2.5 rounded-lg font-semibold text-xs text-white uppercase" href="{{ route('posts.edit', $post) }}">
+                                Edit
                             </a>
                             <form action="{{route('posts.destroy', $post)}}" method="POST">
                                 @csrf
                                 @method('delete')
                                 <x-danger-button  onclick="return confirm('¿Está seguro que desea eliminar este registro?')">
-                                    {{ __('Eliminar') }}
+                                    {{ __('Delete') }}
                                 </x-danger-button>
                             </form>
                         </div>

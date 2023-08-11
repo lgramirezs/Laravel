@@ -7,7 +7,7 @@
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
                 {{ __('Gestión de usuarios') }}
             </h2>
-            <x-tertiary-button :href="route('users.create')">Crear un nuevo usuario</x-tertiary-button>
+            <x-tertiary-button :href="route('users.create')">Create new user</x-tertiary-button>
         </div>
     </x-slot>
 
